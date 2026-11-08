@@ -1,5 +1,5 @@
 /* TCS Control: guarda a página para abrir sem rede. Sempre tenta a versão nova primeiro. */
-const CACHE = "tcs-control-v1";
+const CACHE = "tcs-control-v2";
 const ARQ = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARQ)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => {
