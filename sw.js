@@ -1,5 +1,5 @@
 /* VQA Control: guarda a página para abrir sem rede. Sempre tenta a versão nova primeiro. */
-const CACHE = "tcs-control-v13";
+const CACHE = "tcs-control-v14";
 const ARQ = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./resultados.html", "./resultados.webmanifest", "./res-icon-192.png", "./res-icon-512.png"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARQ)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", e => {
